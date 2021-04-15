@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear Contacto</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/contactos">Lista de Contactos</a></h3>
+            <h1>Crear Nuevo Contacto</h1>
+
+            <form action="/contactos/save" method="post">
+                <!--ID CONTACTO-->
+                <div class="form-group row">
+                    <label class="col-sm-1">ID:</label>
+                    <div class="col-sm-4">
+                    <input type="number" name="ID_CONTACTO" class="form-control form-control-sm col-md-3">
+                    </div>
+                </div>
+                <!--NOMBRES-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Nombres:</label>
+                    <div class="col-sm-9">
+                    <input type="text" name="NOMBRES" class="form-control form-control-sm col-md-3">
+                    </div>
+                </div>
+                <!--APELLIDOS-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Apellidos:</label>
+                    <div class="col-sm-9">
+                    <input type="text" name="APELLIDOS" class="form-control form-control-sm col-md-3">
+                    </div>
+                </div>
+                <!--EMAIL-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Email:</label>
+                    <div class="col-sm-10">
+                    <input type="email" name="EMAIL" class="form-control form-control-sm col-md-3">
+                    </div>
+                </div>
+                <!--LOGIN-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Login:</label>
+                    <div class="col-sm-4">
+                    <input type="text" name="LOGIN" class="form-control form-control-sm col-md-3">
+                    </div>
+                </div>
+                <!--CLAVE-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Clave:</label>
+                    <div class="col-sm-5">
+                    <input type="text" name="CLAVE" class="form-control form-control-sm col-md-3">
+                    </div>
+                </div>
+
+                <!--BOTON-->
+                <button type="submit" value="Grabar" class="btn btn-primary">Grabar</button>
+
+            </form>
+        </div>
+    </body>
+</html>

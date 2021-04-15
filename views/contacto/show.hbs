@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detalle de Contactos</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/contactos">Lista de Contactos</a></h3>
+            <h1>Detalle de Contacto</h1>
+
+            <table>
+                <!--ID-->
+                <div class="form-group row">
+                    <label class="col-sm-1">ID:</label>
+                    <div class="col-sm-4">
+                    <input type="number" name="ID_CONTACTO" value="{{ contacto.ID_CONTACTO }}" class="form-control form-control-sm col-md-3" disabled>
+                    </div>
+                </div>
+                <!--NOMBRES-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Nombres:</label>
+                    <div class="col-sm-9">
+                    <input type="text" name="NOMBRES" value="{{ contacto.NOMBRES }}" class="form-control form-control-sm col-md-3" disabled>
+                    </div>
+                </div>
+                <!--APELLIDOS-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Apellidos:</label>
+                    <div class="col-sm-9">
+                    <input type="text" name="APELLIDOS" value="{{ contacto.APELLIDOS }}" class="form-control form-control-sm col-md-3" disabled>
+                    </div>
+                </div>
+                <!--EMAIL-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Email:</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="EMAIL" value="{{ contacto.EMAIL }}" class="form-control form-control-sm col-md-3" disabled>
+                    </div>
+                </div>
+                <!--LOGIN-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Login:</label>
+                    <div class="col-sm-4">
+                    <input type="text" name="LOGIN" value="{{ contacto.LOGIN }}" class="form-control form-control-sm col-md-3" disabled>
+                    </div>
+                </div>
+                <!--CLAVE-->
+                <div class="form-group row">
+                    <label class="col-sm-1">Clave:</label>
+                    <div class="col-sm-5">
+                    <input type="text" name="CLAVE" value="{{ contacto.CLAVE }}" class="form-control form-control-sm col-md-3" disabled>
+                    </div>
+                </div>
+            </table>
+
+            <!--BOTONES-->
+            <h3>
+                <a type="button" href="/contactos/edit/{{ contacto.ID_CONTACTO }}" class="btn btn-outline-primary col-sm-1">Editar</a>
+            </h3>
+                
+            <form action="/contactos/delete/{{ contacto.ID_CONTACTO }}" method="post">
+                <button type="submit" class="btn btn-danger col-sm-1">Eliminar</button>
+            </form>
+
+        </div>
+    </body>
+</html>
+
